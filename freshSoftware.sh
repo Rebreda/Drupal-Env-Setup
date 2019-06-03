@@ -26,7 +26,8 @@ sudo apt-get install -y \
     software-properties-common
 
 # Get VSCodium
-sudo apt-get install -y vscodium 
+sudo apt-get install -y vscodium
+cat extensions.list | vscodium
 
 # Get Insomnia
 sudo apt-get install insomnia
