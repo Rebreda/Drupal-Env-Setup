@@ -1,6 +1,6 @@
 # Enable sources, add PPAs and update sources: 
-# sudo sed 's/# deb/deb/' -i /etc/apt/sources.list
 
+sudo apt-get install apt-transport-https
 # VSCodium source
 wget -qO - https://gitlab.com/paulcarroty/vscodium-deb-rpm-repo/raw/master/pub.gpg | sudo apt-key add - 
 echo 'deb https://gitlab.com/paulcarroty/vscodium-deb-rpm-repo/raw/repos/debs/ vscodium main' | sudo tee -a /etc/apt/sources.list.d/vscodium.list 
@@ -28,7 +28,7 @@ sudo apt-get install -y \
 
 # Get VSCodium
 sudo apt-get install -y vscodium
-cat extensions.list | vscodium
+cat extensions.list | xargs -L1 vscodium 
 
 # Get Insomnia
 sudo apt-get install insomnia
