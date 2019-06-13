@@ -1,6 +1,17 @@
 # Drupal/DrupalVM software setup for Debian Distros
 
-This How-To goes over setting up your local Drupal/DrupalVM development environment on a Debian-based OS with some opinions. It will be written from a Debian Buster perspective but can be adapted to work with any Debian-like OS (such as Ubuntu) with some tweaks. The commands are all able to be run in terminal as is - but should be studied to ensure packages are correctly configured to your distro.
+This script is meant to help setup Drupal/DrupalVM development environment on a Debian-based OS with some opinionated software (like VSCodium). It will be written from a Debian Buster perspective but can be adapted to work with any Debian-like OS (such as Ubuntu) with some tweaks. The commands are all able to be run in terminal as is - but should be studied to ensure packages are correctly configured to your distro.
+
+## Run The Script
+
+If you just want to get running:
+
+1. Clone the repo.
+2. `cd devsoftware` into the new directory.
+3. `chmod +x ./freshSoftware.sh` to make script executable.
+4. `./freshSoftware` to run.
+
+If you want to understand the script and what software it installs please continue reading.
 
 ## Install PHP and DrupalVM Software Dependencies
 
