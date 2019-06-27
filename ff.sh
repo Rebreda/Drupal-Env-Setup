@@ -23,21 +23,21 @@ function download(){
 }
 
 function update(){
-    echo 'Attempting to update firefox in place'
-    tar xjf FirefoxSetup.tar.bz2 -C /opt/firefox/
+    echo 'Attempting to update firefox in place (Requires Sudo)'
+    sudo tar xjf FirefoxSetup.tar.bz2 -C /opt/firefox/ &>/dev/null
     echo 'Update complete, cleaning files'
     rm ./FirefoxSetup.tar.bz2
 }
 
 function makeUpdate(){
+    echo "Before update version: $(firefox -v)"
     download
     update
+    echo "After update version: $(firefox -v)"
     exit 0
 }
 
 # Initialize our own variables:
-output_file=""
-verbose=0
 downloadLink="https://download.mozilla.org/?product=firefox-devedition-latest-ssl&os=linux64&lang=en-US"
 OPTIND=1
 isUpdate=false
